@@ -3,35 +3,8 @@ import TopBar from '../Components/TopBar';
 import { FaCalendarAlt, FaClock } from 'react-icons/fa';
 import Footer from '../Components/Footer';
 import { Link } from 'react-router-dom';
-
 const HomePage = () => {
-    const [activated, setActivated] = useState(false);
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
-    const [visible, setVisible] = useState(true);
-
-    // Function to handle scroll event
-    const handleScroll = () => {
-        const currentScrollPos = window.pageYOffset;
-
-        // Set visibility based on scroll position and direction
-        setVisible(
-            (prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10
-        );
-
-        // Set previous scroll position
-        setPrevScrollPos(currentScrollPos);
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [prevScrollPos, visible]);
-
-    const handleClick = () => {
-        setActivated(!activated);
-    };
-
+    const visible = true; 
     return (
         <div>
             {/* TopBar with conditional visibility */}
@@ -332,9 +305,9 @@ const HomePage = () => {
                 <p className="text-base leading-relaxed max-w-xl mb-4">
                     People use Meetup to meet new people, learn new things, find support, get out of their comfort zones, and pursue their passions, together. Membership is free.
                 </p>
-                <button className={`bg-gradient-to-r from-${activated ? 'green-500' : 'blue-500'} to-${activated ? 'green-600' : 'blue-600'} hover:bg-black-100 text- font-bold py-2 px-4 rounded`} onClick={handleClick}>
-                    {activated ? 'Activated' : 'Activate'}
-                </button>
+                <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                Join Now
+            </button>
             </div>
 
        {/* Popular cities on Meetup section */}
