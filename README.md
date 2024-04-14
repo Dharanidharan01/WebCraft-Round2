@@ -20,6 +20,10 @@ This project is developed for Round 2 of the Webcraft Web Development Competitio
 - React.js: A JavaScript library for building user interfaces, used for frontend development.
 - Tailwind CSS: A utility-first CSS framework for rapidly building custom designs, used for styling the website.
 
+  ## Project Structure
+  ![image](https://github.com/Dharanidharan01/WebCraft-Round2/assets/110535314/59fa7877-d226-40e8-be02-82404e6be69e)
+
+
   ## Screenshots
 - **Website Screenshot:**
  ![image](https://github.com/Dharanidharan01/WebCraft-Round2/assets/110535314/c1bd8ff6-43a8-49ab-b59e-eb1d01d21197)
@@ -27,7 +31,8 @@ This project is developed for Round 2 of the Webcraft Web Development Competitio
 ![image](https://github.com/Dharanidharan01/WebCraft-Round2/assets/110535314/5e199bb1-77bf-4460-9ee2-98ae15e28eec)
 ![image](https://github.com/Dharanidharan01/WebCraft-Round2/assets/110535314/a9373b12-37a7-4cf1-bc4b-b752ba2c5961)
 
-
+# Video Drive link
+https://drive.google.com/file/d/1ItNhy5AD4WD0HL6mPLVEZVf1eUE_7m5N/view?usp=sharing
 
 
 
