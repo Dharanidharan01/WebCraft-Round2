@@ -22,6 +22,7 @@ const App = () => {
         <Route path="HomePage" element={<HomePage />} />
         <Route path="ShoppingPage" element={<ShoppingPage />} />
         <Route path="EventShowcase" element={<EventShowcase />} />
+        <Route path="ContactUsPage" element={<ContactUsPage />} />
         <Route path="BookingConfirmationPopup" element={<BookingConfirmationPopup />} />
         <Route path="VendorsShowcasePage" element={<VendorsShowcasePage />} />
         {/* Add more routes as needed */}

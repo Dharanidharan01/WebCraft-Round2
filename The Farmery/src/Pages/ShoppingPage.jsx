@@ -238,7 +238,7 @@ const ShoppingPage = () => {
       <Link to="/ContactUsPage">
         <button className="bg-green-500 text-white px-6 py-3 rounded-md mr-4">Contact Us</button>
       </Link>
-      <Link to="/ContactUsPage">
+      <Link to="/VendorsShowcasePage">
         <button className="bg-black text-white px-6 py-3 rounded-md">Mail Us</button>
       </Link>
     </div>
