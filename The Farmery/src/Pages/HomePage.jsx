@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TopBar from '../Components/TopBar';
 import { FaCalendarAlt, FaClock } from 'react-icons/fa';
 import Footer from '../Components/Footer';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
     const [activated, setActivated] = useState(false);
@@ -77,6 +78,7 @@ const HomePage = () => {
           <span className="text-white">Flavorful Creations</span>
         </div>
       </div>
+
 
 
       {/* Events Near You section */}
@@ -188,18 +190,25 @@ const HomePage = () => {
       </div>
       <div className="text-black text-left ml-0 mt-20 p-1 font-poppins relative">
 
-        
+      
+
 {/* New Section: Showcase */}
-<section className="container mx-auto mt-16 px-4">
+<section className="container mx-auto mt-16 px-4 "> {/* Add relative positioning */}
     <h2 className="text-3xl font-bold mb-8">Explore Our Market</h2>
+    {/* Remove the absolute overlay div */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Square Card 1 */}
         <div className="bg-black rounded-lg shadow-md p-6 text-white shadow-2xl shadow-blue-500/60">
-        <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-blue-500 to-white-900 text-transparent bg-clip-text">Fresh Produce</h3>
-
+            <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-blue-500 to-white-900 text-transparent bg-clip-text">Fresh Produce</h3>
             <p className="text-gray-300">Discover a wide selection of locally-grown fruits and vegetables at [Farmers Market Name]. From vibrant heirloom tomatoes bursting with flavor to crisp, leafy greens picked just this morning, our market offers an abundance of farm-fresh goodness for you to enjoy.</p>
-            <h3 className="text-x font-semibold mb-2 mt-10">Visit Us Today</h3>
+            <h3 className="text-xl font-semibold mb-2 mt-10">Visit Us Today</h3>
             <p className="text-gray-300">Plan your visit to Farmery and experience the joy of shopping for fresh produce in a vibrant and community-driven atmosphere. </p>
+            {/* Gradient Button */}
+            <button className="hover:bg-black-100 text-transparent bg-gradient-to-r from-blue-500 to-pink-500 font-bold py-2 px-4 rounded mt-4">
+    <Link to="/ShoppingPage" className="text-white">Shop Now</Link>
+</button>
+
+
         </div>
         {/* Square Card 2 and 3 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -224,11 +233,97 @@ const HomePage = () => {
 
 
 
+<hr className="border-gray-300 mt-20 ml-0 border-solid border-t-2" /> {/* Line with increased thickness */}
+{/* Calendar Section */}
+<div className="text-black text-left ml-0  mt-1 p-10 font-poppins relative">
+    {/* Gradient overlay */}
+    <div className="absolute inset-0 opacity-50 rounded-lg"></div>
+    <h2 className="text-3xl font-bold mb-4 relative z-10" style={{ paddingTop: "60px" }}>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500">Upcoming Events</span>
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Calendar */}
+        <div className="bg-white rounded-lg shadow-md p-4 ">
+            <div className="flex justify-center items-center mb-4">
+                <div className="w-10 h-10 flex justify-center items-center rounded-full bg-green-400 text-white mr-4">Sun</div>
+                <div className="w-10 h-10 flex justify-center items-center rounded-full bg-orange-400 text-white mr-4">Mon</div>
+                <div className="w-10 h-10 flex justify-center items-center rounded-full bg-orange-400 text-white mr-4">Tue</div>
+                <div className="w-10 h-10 flex justify-center items-center rounded-full bg-orange-400 text-white mr-4">Wed</div>
+                <div className="w-10 h-10 flex justify-center items-center rounded-full bg-orange-400 text-white mr-4">Thu</div>
+                <div className="w-10 h-10 flex justify-center items-center rounded-full bg-orange-400 text-white mr-4">Fri</div>
+                <div className="w-10 h-10 flex justify-center items-center rounded-full bg-green-400 text-white">Sat</div>
+            </div>
+            {/* Example Calendar Dates */}
+            <div className="grid grid-cols-7 gap-1">
+                {[...Array(31).keys()].map((day) => (
+                    <div key={day} className={`w-10 h-10 flex justify-center items-center rounded-full text-gray-700 ${day + 1 === 11  || day + 1 === 31 ? 'bg-yellow-400' : 'bg-gray-200'}`}>{day + 1}</div>
+                ))}
+            </div>
+        </div>
+    
+{/* Reminder Card Container */}
+<div className="bg-white rounded-lg shadow-md p-4">
+    <h3 className="text-xl font-semibold mb-2">Reminders</h3>
+    {/* Reminder Cards */}
+    <div className="grid grid-cols-1 gap-4">
+        {/* Reminder 1 */}
+        <div className="bg-black rounded-lg shadow-md p-4 text-white flex justify-between items-center">
+            <div>
+                <h3 className="text-lg font-semibold mb-1">Market Showcase</h3>
+                <p className="text-gray-300">10:00 AM</p>
+            </div>
+            <div className="flex space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+        </div>
+        {/* Reminder 2 */}
+        <div className="bg-black rounded-lg shadow-md p-4 text-white flex justify-between items-center">
+            <div>
+                <h3 className="text-lg font-semibold mb-1">Live Music at the Market</h3>
+                <p className="text-gray-300">2:30 PM</p>
+            </div>
+            <div className="flex space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+        </div>
+        {/* Reminder 3 */}
+        <div className="bg-black rounded-lg shadow-md p-4 text-white flex justify-between items-center">
+            <div>
+                <h3 className="text-lg font-semibold mb-1">Holiday Market Extravaganza</h3>
+                <p className="text-gray-300">5:00 PM</p>
+            </div>
+            <div className="flex space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
 
 
 
   {/* Gradient overlay */}
-<div className="absolute inset-0  opacity-50 rounded-lg"></div>
+<div className="relative inset-0   rounded-lg"></div>
 <h2 className="text-3xl font-bold mb-4 relative z-10" style={{ paddingTop: "60px" }}>
     <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500">Join Meetup</span>
 </h2>
@@ -237,7 +332,7 @@ const HomePage = () => {
                 <p className="text-base leading-relaxed max-w-xl mb-4">
                     People use Meetup to meet new people, learn new things, find support, get out of their comfort zones, and pursue their passions, together. Membership is free.
                 </p>
-                <button className={`bg-gradient-to-r from-${activated ? 'green-500' : 'blue-500'} to-${activated ? 'green-600' : 'blue-600'} hover:bg-black-100 text-white font-bold py-2 px-4 rounded`} onClick={handleClick}>
+                <button className={`bg-gradient-to-r from-${activated ? 'green-500' : 'blue-500'} to-${activated ? 'green-600' : 'blue-600'} hover:bg-black-100 text- font-bold py-2 px-4 rounded`} onClick={handleClick}>
                     {activated ? 'Activated' : 'Activate'}
                 </button>
             </div>
