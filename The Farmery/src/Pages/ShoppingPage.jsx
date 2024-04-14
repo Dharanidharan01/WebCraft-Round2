@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import TopBar from '../Components/TopBar';
+import { FaCalendarAlt, FaClock } from 'react-icons/fa';
 import Footer from '../Components/Footer';
+import { Link } from 'react-router-dom';
 
 const ShoppingPage = () => {
   return (
@@ -37,7 +39,7 @@ const ShoppingPage = () => {
     
     {/* Image */}
     <img
-      src="https://img.freepik.com/free-photo/hand-holding-rip-apple-tree_23-2147907066.jpg?t=st=1713098846~exp=1713102446~hmac=26ff51122e909afffd7e8159cd4d38b61bea1285e2fbbc2ed20f64274d396a5f&w=740" // Replace 'your-left-image-url.jpg' with the URL or path of your image
+      src="https://img.freepik.com/free-photo/hand-holding-rip-apple-tree_23-2147907066.jpg?t=st=1713106989~exp=1713110589~hmac=5109b36fdb91d565ac7d53b766d6cafdb570f463e8ad50b8f5c750c6676b57e0&w=740" // Replace 'your-left-image-url.jpg' with the URL or path of your image
       alt="Left Image"
       className="w-full h-auto rounded-lg object-cover transition-opacity duration-300 group-hover:opacity-50"
     />
@@ -104,26 +106,26 @@ const ShoppingPage = () => {
             <div className="flex flex-col items-center border border-black rounded-lg p-4">
   <img src="https://img.freepik.com/free-photo/raw-cross-ingredient-studio-citrus_1172-204.jpg?t=st=1713100621~ex
   p=1713104221~hmac=eaf6c12d419a2e991efc857ca182d9b5e2ba1b2833b63c35ce214fcb9511df7a&w=740" alt="Product 1" className="w-full h-auto rounded-lg mb-2" />
-  <div className="text-lg mb-1">Product 1 Name</div>
-  <div className="text-gray-500 mb-2">$10</div>
+  <div className="text-lg mb-1">Orange</div>
+  <div className="text-gray-500 mb-2">$37</div>
   <button className="bg-blue-500 text-white px-4 py-2 mb-0 rounded-md">Buy</button>
 </div>
 
 <div className="flex flex-col items-center border border-black rounded-lg p-4">
   <img src="https://img.freepik.com/free-photo/raw-fresh-texture-vitamin-fruit_1172-220.jpg?t=st=1713101541~exp=1713105141~hmac=308c2d97db27c8824b43274489760aa841b5b5b12b6720577dc51de720e7861b&w=740" alt="Product 1" className="w-full h-auto rounded-lg mb-2" />
-  <div className="text-lg mb-1">Product 1 Name</div>
-  <div className="text-gray-500 mb-2">$10</div>
+  <div className="text-lg mb-1">Pineapple</div>
+  <div className="text-gray-500 mb-2">$34</div>
   <button className="bg-blue-500 text-white px-4 py-2 mb-0 rounded-md">Buy</button>
 </div>
 <div className="flex flex-col items-center border border-black rounded-lg p-4">
   <img src="https://img.freepik.com/free-photo/strawberry-berry-levitating-white-background_485709-57.jpg?t=st=1713102552~exp=1713106152~hmac=54eec7d80bea4fba8d60bd2fdecb1f015998606e8258e406af7a534904a4df52&w=740" alt="Product 1" className="w-full h-auto rounded-lg mb-2" />
-  <div className="text-lg mb-1">Product 1 Name</div>
+  <div className="text-lg mb-1">Strawberry</div>
   <div className="text-gray-500 mb-2">$10</div>
   <button className="bg-blue-500 text-white px-4 py-2 mb-0 rounded-md">Buy</button>
 </div><div className="flex flex-col items-center border border-black rounded-lg p-4">
   <img src="https://img.freepik.com/free-photo/raisins-dried_1368-9147.jpg?t=st=1713102472~exp=1713106072~hmac=4d7c77a33e19b70bf200052d0d44c00ceaa4cd801275aeec30e096b6b720396f&w=740" alt="Product 1" className="w-full h-auto rounded-lg mb-2" />
-  <div className="text-lg mb-1">Product 1 Name</div>
-  <div className="text-gray-500 mb-2">$10</div>
+  <div className="text-lg mb-1">Dried Grapes</div>
+  <div className="text-gray-500 mb-2">$12</div>
   <button className="bg-blue-500 text-white px-4 py-2 mb-0 rounded-md">Buy</button>
 </div>
            
@@ -146,26 +148,26 @@ const ShoppingPage = () => {
             {/* Product 1 */}
             <div className="flex flex-col items-center border border-black rounded-lg p-4">
   <img src="https://img.freepik.com/free-photo/baked-bread-brown-whole-black-tissue-brown_140725-14863.jpg?t=st=1713102059~exp=1713105659~hmac=92dab00ab7be2a053e1e0213aca025d168a75b2ccccb0b9c5efc91785762991f&w=740" alt="Product 1" className="w-full h-auto rounded-lg mb-2" />
-  <div className="text-lg mb-1">Product 1 Name</div>
-  <div className="text-gray-500 mb-2">$10</div>
+  <div className="text-lg mb-1">Baked bread brown</div>
+  <div className="text-gray-500 mb-2">$23</div>
   <button className="bg-blue-500 text-white px-4 py-2 mb-0 rounded-md">Buy</button>
 </div>
 
 <div className="flex flex-col items-center border border-black rounded-lg p-4">
   <img src="https://img.freepik.com/free-photo/sweet-dessert-pastry-breakfast_23-2147693842.jpg?t=st=1713102079~exp=1713105679~hmac=3c6b84ee1eb242d6ea77f838049a1df607790918c3dc4fb89c3154fe322833b0&w=740" alt="Product 1" className="w-full h-auto rounded-lg mb-2" />
-  <div className="text-lg mb-1">Product 1 Name</div>
-  <div className="text-gray-500 mb-2">$10</div>
+  <div className="text-lg mb-1">Cup Cakes</div>
+  <div className="text-gray-500 mb-2">$12</div>
   <button className="bg-blue-500 text-white px-4 py-2 mb-0 rounded-md">Buy</button>
 </div>
 <div className="flex flex-col items-center border border-black rounded-lg p-4">
   <img src="https://img.freepik.com/free-photo/healthy-sandwich-green-apple-rounds-with-peanut-butter-red-currant-pecan-nuts-rustic-top-view_114579-3862.jpg?t=st=1713102103~exp=1713105703~hmac=afd900c17bc0d8cb052550ccaefad046ddf7ef2c0756f21105172bb3a20924fa&w=740" alt="Product 1" className="w-full h-auto rounded-lg mb-2" />
-  <div className="text-lg mb-1">Product 1 Name</div>
-  <div className="text-gray-500 mb-2">$10</div>
+  <div className="text-lg mb-1">Apple sandwich</div>
+  <div className="text-gray-500 mb-2">$15</div>
   <button className="bg-blue-500 text-white px-4 py-2 mb-0 rounded-md">Buy</button>
 </div><div className="flex flex-col items-center border border-black rounded-lg p-4">
   <img src="https://img.freepik.com/free-photo/close-up-composition-tasty-croissants_23-2148829549.jpg?t=st=1713102127~exp=1713105727~hmac=92650a76cfdb0539a6ecf520696e89cb90365175ad262c1ccfa88393e75dd8cd&w=740" alt="Product 1" className="w-full h-auto rounded-lg mb-2" />
-  <div className="text-lg mb-1">Product 1 Name</div>
-  <div className="text-gray-500 mb-2">$10</div>
+  <div className="text-lg mb-1">Croissants</div>
+  <div className="text-gray-500 mb-2">$20</div>
   <button className="bg-blue-500 text-white px-4 py-2 mb-0 rounded-md">Buy</button>
 </div>
            
@@ -188,26 +190,26 @@ const ShoppingPage = () => {
             {/* Product 1 */}
             <div className="flex flex-col items-center border border-black rounded-lg p-4">
   <img src="https://img.freepik.com/free-photo/arrangement-antiques-market-objects_23-2148950908.jpg?t=st=1713102388~exp=1713105988~hmac=e62001520c19fcebd309f103756e55e1d181826920695e2f204fb36b61854608&w=740" alt="Product 1" className="w-full h-auto rounded-lg mb-2" />
-  <div className="text-lg mb-1">Product 1 Name</div>
+  <div className="text-lg mb-1">Antiques</div>
   <div className="text-gray-500 mb-2">$10</div>
   <button className="bg-blue-500 text-white px-4 py-2 mb-0 rounded-md">Buy</button>
 </div>
 
 <div className="flex flex-col items-center border border-black rounded-lg p-4">
   <img src="https://img.freepik.com/free-photo/flat-lay-bamboo-food-steamer_23-2148368692.jpg?t=st=1713102293~exp=1713105893~hmac=b0ecb591b6d7762a33c674663370f2b8dd4db75ff789344bf97fdf5b3f6422e3&w=740" alt="Product 1" className="w-full h-auto rounded-lg mb-2" />
-  <div className="text-lg mb-1">Product 1 Name</div>
-  <div className="text-gray-500 mb-2">$10</div>
+  <div className="text-lg mb-1">Bamboo Stream</div>
+  <div className="text-gray-500 mb-2">$20</div>
   <button className="bg-blue-500 text-white px-4 py-2 mb-0 rounded-md">Buy</button>
 </div>
 <div className="flex flex-col items-center border border-black rounded-lg p-4">
   <img src="https://img.freepik.com/free-photo/top-view-tableware-collection_23-2148861776.jpg?t=st=1713102264~exp=1713105864~hmac=b837495a54112170c3e8191eb60cf209bb569600fb7fbdf27e9c9b9d32ef85fb&w=740" alt="Product 1" className="w-full h-auto rounded-lg mb-2" />
-  <div className="text-lg mb-1">Product 1 Name</div>
-  <div className="text-gray-500 mb-2">$10</div>
+  <div className="text-lg mb-1">Tableware Cup</div>
+  <div className="text-gray-500 mb-2">$50</div>
   <button className="bg-blue-500 text-white px-4 py-2 mb-0 rounded-md">Buy</button>
 </div><div className="flex flex-col items-center border border-black rounded-lg p-4">
   <img src="https://img.freepik.com/free-photo/gardening-concept-with-plants_23-2148000308.jpg?t=st=1713102330~exp=1713105930~hmac=d730f9f1036a0c1a18079350f3900a5ee207c67fa8515e5bf7440718625cefba&w=740" alt="Product 1" className="w-full h-auto rounded-lg mb-2" />
-  <div className="text-lg mb-1">Product 1 Name</div>
-  <div className="text-gray-500 mb-2">$10</div>
+  <div className="text-lg mb-1">Gardening pots</div>
+  <div className="text-gray-500 mb-2">$30</div>
   <button className="bg-blue-500 text-white px-4 py-2 mb-0 rounded-md">Buy</button>
 </div>
            
@@ -233,9 +235,13 @@ const ShoppingPage = () => {
 
   {/* Buttons */}
   <div className="flex justify-center">
-    <button className="bg-green-500 text-white px-6 py-3 rounded-md mr-4">Contact Us</button>
-    <button className="bg-black text-white px-6 py-3 rounded-md">Mail Us</button>
-  </div>
+      <Link to="/ContactUsPage">
+        <button className="bg-green-500 text-white px-6 py-3 rounded-md mr-4">Contact Us</button>
+      </Link>
+      <Link to="/ContactUsPage">
+        <button className="bg-black text-white px-6 py-3 rounded-md">Mail Us</button>
+      </Link>
+    </div>
 </div>
 {/* Image Section */}
 <div className="bg-black rounded-lg mt-10 shadow-[5px_5px_0px_0px_rgba(109,40,217)] py-12">
@@ -272,7 +278,7 @@ const ShoppingPage = () => {
   <div className="w-full max-w-screen-lg px-8">
     <h2 className="text-3xl font-bold mb-10 mt-10 font-poppins" style={{ background: '-webkit-linear-gradient(left, #00c6ff, #0072ff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Visit Us Today</h2>
     <p className="text-lg text-gray-600 mb-6">
-      Ready to experience the magic of [Farmers Market Name]? Plan your visit today and immerse yourself 
+      Ready to experience the magic of Farmery? Plan your visit today and immerse yourself 
       in the sights, sounds, and flavors of our bustling marketplace. Whether you're a seasoned market-goer 
       or a first-time visitor, you're sure to find something delightful around every corner.
     </p>

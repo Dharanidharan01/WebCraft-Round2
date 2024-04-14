@@ -72,7 +72,9 @@ const HomePage = () => {
             </div>
             <p><strong>Location:</strong> Farmer's Kitchen Culinary Studio</p>
             <p className='mt-2'><strong>Description:</strong> Join us for a hands-on cooking workshop led by local chefs, where you'll learn how to create delicious dishes</p>
-            <button className="bg-black hover:bg-black-100 text-white font-bold py-2 px-4 rounded mt-4">Book Now</button>
+            <div className="flex justify-">
+        <Link to="/EventShowcase" className="bg-black hover:bg-black-100 text-white font-bold py-2 px-4 rounded mt-4">Book Now</Link>
+      </div>
           </div>
           {/* Event 2 */}
           <div className="bg-white rounded-lg shadow-md p-4">
