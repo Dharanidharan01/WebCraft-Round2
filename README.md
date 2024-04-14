@@ -31,8 +31,10 @@ This project is developed for Round 2 of the Webcraft Web Development Competitio
 
 
 
-- **Figma File Screenshot:**
-  ![Figma File Screenshot](figma_screenshot.png)
+- **Figma File Screenshot & URL:**
+ ![image](https://github.com/Dharanidharan01/WebCraft-Round2/assets/110535314/d679e72d-01df-4235-9463-09bc380d785e)
+https://www.figma.com/file/Z41jzfD5NTF7xGnWYV4hqb/%23DesignWithme?type=design&node-id=0-1&mode=design&t=2reLb2bTss3fCKQJ-0
+
 
 
 ## Installation
