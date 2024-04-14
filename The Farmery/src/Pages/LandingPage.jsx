@@ -2,6 +2,7 @@ import React from 'react';
 import TopBar from '../Components/TopBar';
 import '@fontsource/poppins'; // Importing Poppins font
 import Footer from '../Components/Footer';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   return (
@@ -13,7 +14,9 @@ const LandingPage = () => {
           Charm of Locally Grown</h2>
           <br />
           <p className="text-lg text-gray-700">Explore a Haven of Fresh Produce, Delectable Baked Goods,<br />  and Artisan Crafts. Join us in Supporting Local Farmers and Artisans.</p>
-          <button className="bg-black hover:bg-black-100 text-white font-bold py-2 px-4 rounded mt-4">Get Started</button>
+          <button className="bg-black hover:bg-black-100 text-white font-bold py-2 px-4 rounded mt-4">
+        <Link to="HomePage">Get Started</Link> {/* Link to the home page */}
+      </button>
           <div style={{ height: '60px' }}></div> {/* Adding space after the button */}
           <div className="text-lg text-gray-700">
             <p><strong>Explore a Haven of:</strong></p>
