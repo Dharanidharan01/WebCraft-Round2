@@ -33,7 +33,8 @@ This project is developed for Round 2 of the Webcraft Web Development Competitio
 
 - **Figma File Screenshot & URL:**
  ![image](https://github.com/Dharanidharan01/WebCraft-Round2/assets/110535314/d679e72d-01df-4235-9463-09bc380d785e)
-https://www.figma.com/file/Z41jzfD5NTF7xGnWYV4hqb/%23DesignWithme?type=design&node-id=0-1&mode=design&t=2reLb2bTss3fCKQJ-0
+ <br>
+ https://www.figma.com/file/Z41jzfD5NTF7xGnWYV4hqb/%23DesignWithme?type=design&node-id=0%3A1&mode=design&t=2reLb2bTss3fCKQJ-1
 
 
 
@@ -44,9 +45,11 @@ To run this project locally, follow these steps:
 3. Install dependencies using `npm install`.
 4. Start the development server using `npm start`.
 5. Open your web browser and visit `http://localhost:3000` to view the website.
-
-## Contributing
-Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes.
-
+<br>
+*Image credits: Background vector created by freepik - www.freepik.com*
+<br>
+*Image credits: Background vector created by midjourny*
+<br>
+<br>
 ## License
 This project is licensed under the [MIT License](LICENSE).
