@@ -34,9 +34,14 @@ This project is developed for Round 2 of the Webcraft Web Development Competitio
 # Video Drive link
 https://drive.google.com/file/d/1ItNhy5AD4WD0HL6mPLVEZVf1eUE_7m5N/view?usp=sharing
 
+## Logo Mockups
+![image](https://github.com/Dharanidharan01/WebCraft-Round2/assets/110535314/7a941d7d-f80e-47f5-8031-4da2d6ced38f)
+![image](https://github.com/Dharanidharan01/WebCraft-Round2/assets/110535314/ead7af8c-46d8-4552-9403-2dd8fada6f20)
 
 
-- **Figma File Screenshot & URL:**
+
+
+## **Figma File Screenshot & URL:**
  ![image](https://github.com/Dharanidharan01/WebCraft-Round2/assets/110535314/d679e72d-01df-4235-9463-09bc380d785e)
  <br>
  https://www.figma.com/file/Z41jzfD5NTF7xGnWYV4hqb/%23DesignWithme?type=design&node-id=0%3A1&mode=design&t=2reLb2bTss3fCKQJ-1
