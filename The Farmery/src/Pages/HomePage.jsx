@@ -34,7 +34,7 @@ const HomePage = () => {
     return (
         <div>
             {/* TopBar with conditional visibility */}
-            <TopBar visible={visible} />
+            <TopBar visible={visible} style={{ position: 'fixed', top: visible ? '0' : '-60px', transition: 'top 0.5s' }} />
             <div className="relative">
         {/* Black shade with opacity */}
         <div className="absolute top-0 left-0 w-full h-full rounded-lg bg-black opacity-40"></div>
@@ -188,11 +188,52 @@ const HomePage = () => {
       </div>
       <div className="text-black text-left ml-0 mt-20 p-1 font-poppins relative">
 
-   {/* Gradient overlay */}
-                <div className="absolute inset-0  opacity-50 rounded-lg"></div>
-                <h2 className="text-3xl font-bold mb-4 relative z-10">
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500">Join Meetup</span>
-                </h2>
+        
+{/* New Section: Showcase */}
+<section className="container mx-auto mt-16 px-4">
+    <h2 className="text-3xl font-bold mb-8">Explore Our Market</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Square Card 1 */}
+        <div className="bg-black rounded-lg shadow-md p-6 text-white shadow-2xl shadow-blue-500/60">
+        <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-blue-500 to-white-900 text-transparent bg-clip-text">Fresh Produce</h3>
+
+            <p className="text-gray-300">Discover a wide selection of locally-grown fruits and vegetables at [Farmers Market Name]. From vibrant heirloom tomatoes bursting with flavor to crisp, leafy greens picked just this morning, our market offers an abundance of farm-fresh goodness for you to enjoy.</p>
+            <h3 className="text-x font-semibold mb-2 mt-10">Visit Us Today</h3>
+            <p className="text-gray-300">Plan your visit to Farmery and experience the joy of shopping for fresh produce in a vibrant and community-driven atmosphere. </p>
+        </div>
+        {/* Square Card 2 and 3 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Square Card 2 */}
+            <div className="bg-black rounded-lg shadow-md p-6 shadow-2xl shadow-blue-500/70 text-white">
+                <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-blue-500 to-yellow-900 text-transparent bg-clip-text">Baked Goods</h3>
+                <p className="text-gray-300">Indulge in delicious pastries, bread, and cakes, baked fresh daily.</p>
+            </div>
+            <br></br>
+            {/* Square Card 3 */}
+            <div className="bg-black rounded-lg shadow-md p-6 shadow-2xl shadow-blue-500/70 text-white">
+                <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-blue-500 to-pink-900 text-transparent bg-clip-text">Artisan Crafts</h3>
+                <p className="text-gray-300">Explore unique handmade crafts, artworks, and gifts.</p>
+            </div>
+            <div className="bg-black rounded-lg shadow-md p-6 shadow-2xl shadow-blue-500/70 text-white">
+                <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-blue-500 to-green-500 text-transparent bg-clip-text">Music at the Market</h3>
+                <p className="text-gray-300">Get ready to tap your feet and groove to the rhythm of live music!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+  {/* Gradient overlay */}
+<div className="absolute inset-0  opacity-50 rounded-lg"></div>
+<h2 className="text-3xl font-bold mb-4 relative z-10" style={{ paddingTop: "60px" }}>
+    <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500">Join Meetup</span>
+</h2>
+{/* Rest of your code */}
+
                 <p className="text-base leading-relaxed max-w-xl mb-4">
                     People use Meetup to meet new people, learn new things, find support, get out of their comfort zones, and pursue their passions, together. Membership is free.
                 </p>
