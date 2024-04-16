@@ -1,5 +1,6 @@
 // App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/react"
 import LandingPage from './Pages/LandingPage';
 import TopBar from './Components/TopBar';
 import Footer from './Components/Footer';
@@ -15,6 +16,7 @@ import './App.css';
 const App = () => {
   return (
     <Router>
+        <Analytics/>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="Topbar" element={<TopBar />} />
